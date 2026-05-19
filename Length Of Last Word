@@ -28,3 +28,21 @@ public:
         return len;
     }
 };
+
+0 ms runtime code:
+class Solution {
+public:
+    int lengthOfLastWord(string s) {
+        reverse(s.begin() , s.end());
+        long count = 0;
+        int i = 0;
+        while(i < s.size() && s[i] == ' '){
+            i++;
+        }
+        while(i < s.size() && s[i] != ' '){
+            count++;
+            i++;
+        }
+        return count;
+    }
+};
